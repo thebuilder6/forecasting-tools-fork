@@ -1,0 +1,571 @@
+[
+    {
+        "question_text": "Will the world end by 2100?",
+        "question_id": 0,
+        "state": "other",
+        "background_info": "No background info provided.",
+        "resolution_criteria": "No resolution criteria provided.",
+        "fine_print": "No fine print provided.",
+        "page_url": "",
+        "api_url": "",
+        "api_json": {}
+    },
+    {
+        "question_text": "Will the world end by 2100?",
+        "question_id": 1,
+        "state": "open",
+        "background_info": "The world is a big place.",
+        "resolution_criteria": "All human life goes extinct",
+        "fine_print": "This means all biological human life, this resolves positively if humans get uploaded to the cloud",
+        "page_url": "https://example.com",
+        "api_url": "https://api.example.com/api/",
+        "api_json": {}
+    },
+    {
+        "question_text": "Will US offer India a nuclear submarine before Sept 30, 2024?",
+        "question_id": 25769,
+        "state": "open",
+        "background_info": "60% of India\u2019s military hardware inventory (as of March 2022) is [from Russia](https://www.defensenews.com/global/asia-pacific/2022/03/02/india-braces-for-sanctions-on-russia-to-delay-weapons-programs-deliveries/) and the former Soviet Union.  Many of India's conventional and nuclear-powered submarines have been supplied by [Russia/USSR](https://en.wikipedia.org/wiki/List_of_submarines_of_the_Indian_Navy).  The only nuclear submarine in India's Navy as of June 2022 is the Indian-built [INS Arihant](https://en.wikipedia.org/wiki/INS_Arihant).\n\nIn [September 2021](https://www.indiatoday.in/india-today-insight/story/why-the-us-won-t-give-india-nuclear-submarines-1854818-2021-09-20), the US, UK, and Australia made an agreement to design and build 8 nuclear submarines for Australia's navy.  Former Indian naval chief Arun Prakash [commented](https://archive.ph/WR4oJ#selection-1101.1-1109.101), \"For years, the US has been telling India that American laws make it impossible to share nuclear-propulsion tech with anyone, including allies.\"  Srinath Raghavan, professor of international relations at Ashoka University [said](https://archive.ph/WR4oJ#selection-2383.1-2383.215) \"It\u2019s normal realpolitik, [...] The US gave short shrift to an ally like France in the process, [so] it would be silly of India to see this as a snub.\"",
+        "resolution_criteria": "This question will resolve as Yes if the United States makes a public formal agreement with India to build, design, lease, or sell a nuclear-powered submarine for the Indian Navy at any time between January 1, 2022 and Sept 30, 2024",
+        "fine_print": "",
+        "page_url": "https://metaculus.com//questions/25769/will-us-offer-india-a-nuclear-submarine-before-sept-30-2024/",
+        "api_url": "https://www.metaculus.com/api2/questions/25769/",
+        "api_json": {
+            "active_state": "OPEN",
+            "url": "https://www.metaculus.com/api2/questions/25769/",
+            "page_url": "/questions/25769/will-us-offer-india-a-nuclear-submarine-before-sept-30-2024/",
+            "id": 25769,
+            "author": 120279,
+            "author_name": "Tom_Metaculus",
+            "author_id": 120279,
+            "title": "Will US offer India a nuclear submarine before Sept 30, 2024?",
+            "title_short": "Will US offer India a nuclear submarine ",
+            "group_label": "",
+            "resolution": null,
+            "resolved_option": null,
+            "created_time": "2024-07-01T13:46:12.479741Z",
+            "publish_time": "2024-07-01T00:00:00Z",
+            "close_time": "2024-07-08T00:00:00Z",
+            "effected_close_time": null,
+            "resolve_time": "2024-09-30T00:00:00Z",
+            "possibilities": {
+                "type": "binary"
+            },
+            "scoring": {},
+            "type": "forecast",
+            "user_perms": {
+                "PREDICT": true,
+                "RESOLVE": false,
+                "COMMENT_READ": true,
+                "COMMENT_POST": true,
+                "COMMENT_EDIT": true,
+                "COMMENT_MOD": false,
+                "EDIT_DRAFT_CONTENT": false,
+                "EDIT_PENDING_CONTENT": false,
+                "EDIT_UPCOMING_CONTENT": false,
+                "EDIT_LIVE_CONTENT": false,
+                "EDIT_CATEGORIES": false,
+                "CHANGE_DRAFT_STATUS": false,
+                "CHANGE_PENDING_STATUS": false,
+                "CHANGE_ACTIVE_STATUS": false,
+                "CROSSPOST": false,
+                "VIEW_COMMUNITY_PRED": true,
+                "VIEW_METACULUS_PRED": false,
+                "VIEW_COMMUNITY_PRED_AFTER_CLOSE": false,
+                "VIEW_METACULUS_PRED_AFTER_CLOSE": true,
+                "VIEW_AUTHORS_ANONYMIZED": false
+            },
+            "weekly_movement": null,
+            "weekly_movement_direction": 0,
+            "cp_reveal_time": "2024-07-08T00:00:00Z",
+            "edited_time": "2024-07-04T18:43:27.284579Z",
+            "last_activity_time": "2024-07-04T16:53:58.056881Z",
+            "activity": 10.77549657784412,
+            "comment_count": 7,
+            "votes": 0,
+            "community_prediction": {
+                "history": [],
+                "full": {
+                    "y": []
+                },
+                "unweighted": {
+                    "y": []
+                }
+            },
+            "number_of_forecasters": 10,
+            "prediction_count": 81,
+            "approved_time": null,
+            "approved_by_id": null,
+            "related_questions": [],
+            "group": null,
+            "condition": null,
+            "sub_questions": [],
+            "total_sub_question_count": 0,
+            "options": [],
+            "has_fan_graph": false,
+            "image_url": "",
+            "projects": [
+                {
+                    "id": 3294,
+                    "name": "AI benchmarking warmup",
+                    "url": "/project/ai-benchmarking-warmup/",
+                    "type": "QS",
+                    "sign_up_fields": [],
+                    "type_str": "project",
+                    "score_type": "SPOT_PEER_SCORE",
+                    "config": {
+                        "is_fab_project": true
+                    }
+                }
+            ],
+            "primary_project": {
+                "id": 3294,
+                "name": "AI benchmarking warmup",
+                "url": "/project/ai-benchmarking-warmup/",
+                "type": "QS",
+                "sign_up_fields": [],
+                "type_str": "project",
+                "score_type": "SPOT_PEER_SCORE",
+                "config": {
+                    "is_fab_project": true
+                }
+            },
+            "medals_end_year": 2025,
+            "medals_duration": 1,
+            "unweighted_community_prediction_v2": [],
+            "recency_weighted_community_prediction_v2": [],
+            "cp_baseline_score": null,
+            "cp_peer_score": null,
+            "summary": "",
+            "comment_count_snapshot": 7,
+            "user_vote": 0,
+            "user_community_vis": 0,
+            "my_predictions": {
+                "id": 700632,
+                "predictions": [
+                    {
+                        "t": 1719889646.530353,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720046425.47917,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720046882.085357,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720046883.236491,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720048490.350326,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720048585.317843,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720048586.502493,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720055338.996002,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720055339.997101,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720055340.903178,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720055664.795977,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720055666.04817,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720055668.342394,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720056123.99147,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720056125.758539,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720056127.033998,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720057803.795468,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720057804.924286,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720057806.4326,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720058726.824468,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720058727.631643,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720058729.177122,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720111414.806129,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720111421.325938,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720111422.599322,
+                        "x": 0.5
+                    },
+                    {
+                        "t": 1720118109.319405,
+                        "x": 0.001
+                    },
+                    {
+                        "t": 1720118607.234496,
+                        "x": 0.03400000000000001
+                    }
+                ],
+                "points_won": null,
+                "user": 189869,
+                "question": 25769,
+                "active": true,
+                "log_score": null,
+                "absolute_log_score": null,
+                "coverage": null,
+                "username": "VeritasAI",
+                "unweighted_coverage": 0
+            },
+            "divergence": null,
+            "peer_score": null,
+            "spot_peer_score": null,
+            "baseline_score": null,
+            "user_prediction_sequence": null,
+            "description": "60% of India\u2019s military hardware inventory (as of March 2022) is [from Russia](https://www.defensenews.com/global/asia-pacific/2022/03/02/india-braces-for-sanctions-on-russia-to-delay-weapons-programs-deliveries/) and the former Soviet Union.  Many of India's conventional and nuclear-powered submarines have been supplied by [Russia/USSR](https://en.wikipedia.org/wiki/List_of_submarines_of_the_Indian_Navy).  The only nuclear submarine in India's Navy as of June 2022 is the Indian-built [INS Arihant](https://en.wikipedia.org/wiki/INS_Arihant).\n\nIn [September 2021](https://www.indiatoday.in/india-today-insight/story/why-the-us-won-t-give-india-nuclear-submarines-1854818-2021-09-20), the US, UK, and Australia made an agreement to design and build 8 nuclear submarines for Australia's navy.  Former Indian naval chief Arun Prakash [commented](https://archive.ph/WR4oJ#selection-1101.1-1109.101), \"For years, the US has been telling India that American laws make it impossible to share nuclear-propulsion tech with anyone, including allies.\"  Srinath Raghavan, professor of international relations at Ashoka University [said](https://archive.ph/WR4oJ#selection-2383.1-2383.215) \"It\u2019s normal realpolitik, [...] The US gave short shrift to an ally like France in the process, [so] it would be silly of India to see this as a snub.\"",
+            "resolution_criteria": "This question will resolve as Yes if the United States makes a public formal agreement with India to build, design, lease, or sell a nuclear-powered submarine for the Indian Navy at any time between January 1, 2022 and Sept 30, 2024",
+            "fine_print": "",
+            "categories": [],
+            "status": "A"
+        }
+    },
+    {
+        "date_accessed": "2024-10-04T18:00:05.505239",
+        "question_text": "Will  Donald Trump win the 2024 election?",
+        "question_id": 0,
+        "state": "other",
+        "resolution_criteria": null,
+        "fine_print": null,
+        "background_info": null,
+        "community_prediction_at_access_time": null,
+        "question_type": "binary",
+        "page_url": "",
+        "api_url": "",
+        "api_json": {},
+        "num_forecasters": null,
+        "num_predictions": null,
+        "close_time": null,
+        "actual_resolution_time": null,
+        "scheduled_resolution_time": null
+    },
+    {
+        "question_text": "Will the US national average retail price of regular gasoline be greater than $3.40 on September 30, 2024, according to AAA?",
+        "question_id": 28305,
+        "state": "open",
+        "background_info": "According to the working paper Gasoline Prices and Presidential Approval Ratings of the United States (pdf [here](https://www.zbw.eu/econis-archiv/bitstream/11159/654462/1/1895045622_0.pdf)) in a multidecade study of Gallup polling, there is a correlation coefficient of -0.46 between a president's approval rating and real gas prices, with a p-value of 0.00. Indeed according to [S&P Global](https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/oil/062624-us-elections-gasoline-price-fluctuations-could-play-role-in-2024-presidential-election), gas prices were strongly correlated with Joe Biden's disapproval ratings, at least until other factors such as the Israel-Hamas war became stronger influences: \n\n<img src=\"https://www.spglobal.com/commodityinsights/PlattsContent/_assets/_images/latest-news/3e5d524b-863e-488a-abaf-290df810d211.svg\"> \n\nThe question of whether Kamala Harris, as Biden's Vice President, may benefit from a recent fall in gas prices, which are at nearly a [3-year low](https://www.newsweek.com/us-gas-prices-three-year-low-kamala-harris-1952733), is an open one. According to an analysis from [The Economic Times](https://economictimes.indiatimes.com/news/international/us/will-kamala-harris-get-a-bump-from-low-gas-prices-in-the-november-u-s-elections/articleshow/113298086.cms?from=mdr):\n\n>The decline is mostly the result of a confluence of economic factors rather than the direct intervention of the Biden administration. However, it might provide Vice President Harris with favourable obstacles regarding financial matters during the last few months of the campaign.\n\n>The COVID-19 pandemic and Russia's invasion of Ukraine in 2022 are two examples of recent global events that have caused higher gas prices. According to Patrick DeHaan, head of petroleum analysis at GasBuddy, the market is coming into a better sense of balance. So it certainly is good news for the incumbent party, potentially, that gas prices are falling, though he expects there will continue to be a lot of noise from politicians on both sides of the aisle on this issue. \n\nIt is also important to note that historically there can be a lot of volatility in gas prices during election years: \n\n<img src=\"https://www.spglobal.com/commodityinsights/PlattsContent/_assets/_images/latest-news/f02e3ee4-fbc8-462f-b448-69d7fc39927b.svg\">\n\nPlease see chart of recent retail gas prices [here](https://ycharts.com/indicators/us_gas_price).",
+        "resolution_criteria": "This question resolves as **Yes** if the value of the national average retail price of regular gas is >$3.400 on September 30, 2024, according to AAA, which can be accessed through the following link: [AAA National average gas prices](https://gasprices.aaa.com/) Specifically, on October 1, 2024, Metaculus will access the resolution link, and the number will resolve as the *Yesterday Avg.* for *Regular* gas.",
+        "fine_print": "If the resolution source is inaccessible all day for Metaculus Admins on October 1, 2024, this question will be **annulled** due to a core assumption of this question being overturned. Please note this question makes certain other assumptions about the state of the world, such as AAA continuing its methodology, which it describes as, \"Average gas prices are updated daily to reflect changes in price by gas grade and time frame listed.\" These key assumptions of the question being overturned, however, will cause this question to be annulled. Please refer to Metaculus's ambiguity and annulment policies [here](https://www.metaculus.com/help/faq/#ambiguous-annulled).",
+        "page_url": "https://metaculus.com//questions/28305/will-the-us-national-average-retail-price-of-regular-gasoline-be-greater-than-340-on-september-30-2024-according-to-aaa/",
+        "api_url": "https://www.metaculus.com/api2/questions/28305/",
+        "community_prediction_at_access_time": null,
+        "num_forecasters": 20,
+        "num_predictions": 43,
+        "close_time": "2024-09-21T14:30:00",
+        "actual_resolution_time": null,
+        "scheduled_resolution_time": "2024-10-01T14:30:00",
+        "api_json": {
+            "active_state": "OPEN",
+            "url": "https://www.metaculus.com/api2/questions/28305/",
+            "page_url": "/questions/28305/will-the-us-national-average-retail-price-of-regular-gasoline-be-greater-than-340-on-september-30-2024-according-to-aaa/",
+            "id": 28305,
+            "author": 115975,
+            "author_name": "johnnycaffeine",
+            "author_id": 115975,
+            "title": "Will the US national average retail price of regular gasoline be greater than $3.40 on September 30, 2024, according to AAA?",
+            "title_short": "Will the US national average retail pric",
+            "group_label": "",
+            "resolution": null,
+            "resolved_option": null,
+            "created_time": "2024-09-18T13:16:35.121739Z",
+            "publish_time": "2024-09-20T14:30:00Z",
+            "close_time": "2024-09-21T14:30:00Z",
+            "effected_close_time": null,
+            "resolve_time": "2024-10-01T14:30:00Z",
+            "possibilities": {
+                "type": "binary"
+            },
+            "scoring": {},
+            "type": "forecast",
+            "user_perms": {
+                "PREDICT": true,
+                "RESOLVE": false,
+                "COMMENT_READ": true,
+                "COMMENT_POST": true,
+                "COMMENT_EDIT": true,
+                "COMMENT_MOD": false,
+                "EDIT_DRAFT_CONTENT": false,
+                "EDIT_PENDING_CONTENT": false,
+                "EDIT_UPCOMING_CONTENT": false,
+                "EDIT_LIVE_CONTENT": false,
+                "EDIT_CATEGORIES": false,
+                "CHANGE_DRAFT_STATUS": false,
+                "CHANGE_PENDING_STATUS": false,
+                "CHANGE_ACTIVE_STATUS": false,
+                "CROSSPOST": false,
+                "VIEW_COMMUNITY_PRED": true,
+                "VIEW_METACULUS_PRED": false,
+                "VIEW_COMMUNITY_PRED_AFTER_CLOSE": false,
+                "VIEW_METACULUS_PRED_AFTER_CLOSE": true,
+                "VIEW_AUTHORS_ANONYMIZED": false
+            },
+            "weekly_movement": null,
+            "weekly_movement_direction": 0,
+            "cp_reveal_time": "2024-09-21T14:30:00Z",
+            "edited_time": "2024-09-21T01:11:53.782671Z",
+            "last_activity_time": "2024-09-21T00:55:22.141299Z",
+            "activity": 12.988125997504723,
+            "comment_count": 0,
+            "votes": 0,
+            "community_prediction": {
+                "history": [],
+                "full": {
+                    "y": []
+                },
+                "unweighted": {
+                    "y": []
+                }
+            },
+            "number_of_forecasters": 20,
+            "prediction_count": 43,
+            "approved_time": null,
+            "approved_by_id": null,
+            "related_questions": [],
+            "group": null,
+            "condition": null,
+            "unconditional_question": null,
+            "sub_questions": [],
+            "total_sub_question_count": 0,
+            "options": [],
+            "has_fan_graph": false,
+            "image_url": "",
+            "projects": [
+                {
+                    "id": 3349,
+                    "name": "Q3 AI Forecasting Benchmark Tournament",
+                    "url": "/project/aibq3/",
+                    "type": "QS",
+                    "sign_up_fields": [],
+                    "type_str": "project",
+                    "score_type": "SPOT_PEER_SCORE",
+                    "config": {
+                        "is_fab_project": true
+                    }
+                }
+            ],
+            "primary_project": {
+                "id": 3349,
+                "name": "Q3 AI Forecasting Benchmark Tournament",
+                "url": "/project/aibq3/",
+                "type": "QS",
+                "sign_up_fields": [],
+                "type_str": "project",
+                "score_type": "SPOT_PEER_SCORE",
+                "config": {
+                    "is_fab_project": true
+                }
+            },
+            "medals_end_year": 2025,
+            "medals_duration": 1,
+            "unweighted_community_prediction_v2": [],
+            "recency_weighted_community_prediction_v2": [],
+            "cp_baseline_score": null,
+            "cp_peer_score": null,
+            "summary": "",
+            "user_vote": 0,
+            "my_predictions": null,
+            "divergence": null,
+            "peer_score": null,
+            "spot_peer_score": null,
+            "baseline_score": null,
+            "user_prediction_sequence": null,
+            "description": "According to the working paper Gasoline Prices and Presidential Approval Ratings of the United States (pdf [here](https://www.zbw.eu/econis-archiv/bitstream/11159/654462/1/1895045622_0.pdf)) in a multidecade study of Gallup polling, there is a correlation coefficient of -0.46 between a president's approval rating and real gas prices, with a p-value of 0.00. Indeed according to [S&P Global](https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/oil/062624-us-elections-gasoline-price-fluctuations-could-play-role-in-2024-presidential-election), gas prices were strongly correlated with Joe Biden's disapproval ratings, at least until other factors such as the Israel-Hamas war became stronger influences: \n\n<img src=\"https://www.spglobal.com/commodityinsights/PlattsContent/_assets/_images/latest-news/3e5d524b-863e-488a-abaf-290df810d211.svg\"> \n\nThe question of whether Kamala Harris, as Biden's Vice President, may benefit from a recent fall in gas prices, which are at nearly a [3-year low](https://www.newsweek.com/us-gas-prices-three-year-low-kamala-harris-1952733), is an open one. According to an analysis from [The Economic Times](https://economictimes.indiatimes.com/news/international/us/will-kamala-harris-get-a-bump-from-low-gas-prices-in-the-november-u-s-elections/articleshow/113298086.cms?from=mdr):\n\n>The decline is mostly the result of a confluence of economic factors rather than the direct intervention of the Biden administration. However, it might provide Vice President Harris with favourable obstacles regarding financial matters during the last few months of the campaign.\n\n>The COVID-19 pandemic and Russia's invasion of Ukraine in 2022 are two examples of recent global events that have caused higher gas prices. According to Patrick DeHaan, head of petroleum analysis at GasBuddy, the market is coming into a better sense of balance. So it certainly is good news for the incumbent party, potentially, that gas prices are falling, though he expects there will continue to be a lot of noise from politicians on both sides of the aisle on this issue. \n\nIt is also important to note that historically there can be a lot of volatility in gas prices during election years: \n\n<img src=\"https://www.spglobal.com/commodityinsights/PlattsContent/_assets/_images/latest-news/f02e3ee4-fbc8-462f-b448-69d7fc39927b.svg\">\n\nPlease see chart of recent retail gas prices [here](https://ycharts.com/indicators/us_gas_price).",
+            "resolution_criteria": "This question resolves as **Yes** if the value of the national average retail price of regular gas is >$3.400 on September 30, 2024, according to AAA, which can be accessed through the following link: [AAA National average gas prices](https://gasprices.aaa.com/) Specifically, on October 1, 2024, Metaculus will access the resolution link, and the number will resolve as the *Yesterday Avg.* for *Regular* gas.",
+            "fine_print": "If the resolution source is inaccessible all day for Metaculus Admins on October 1, 2024, this question will be **annulled** due to a core assumption of this question being overturned. Please note this question makes certain other assumptions about the state of the world, such as AAA continuing its methodology, which it describes as, \"Average gas prices are updated daily to reflect changes in price by gas grade and time frame listed.\" These key assumptions of the question being overturned, however, will cause this question to be annulled. Please refer to Metaculus's ambiguity and annulment policies [here](https://www.metaculus.com/help/faq/#ambiguous-annulled).",
+            "categories": [],
+            "status": "A"
+        }
+    },
+    {
+        "date_accessed": "2024-11-09T07:29:24.579366",
+        "question_text": "Will the 2024 World Chess Champion be decided in the first 10 games?",
+        "question_id": 29783,
+        "state": "open",
+        "resolution_criteria": "This question will resolve as **Yes** if either player in the 2024 World Chess Championship match reaches 7.5 points before the 11th classical game (e.g. by winning 5 games and drawing another 5).\n\nThis question will also resolve as **Yes** if for any other reason the 2024 Chess Champion is declared by FIDE before the 11th classical game is played (e.g. a player forteits the match or is disqualified during the match).",
+        "fine_print": "* If the match is played by any other players than Ding Liren and Gukesh Dommaraju, the question will be **Annulled**.\n* If the result of the game 10 is not known by 7 January 2025 (and the 2024 Chess Champion is still not declared by that date) the question will resolve as **Ambiguous**.\n* If the results of one or more of the first 10 games are annulled, then these games are not included in the count of the games for the resolution. This includes the case when both players receive 0 points for the game for violating Fair Play policy.\n* If the 2024 Chess Champion title is later revoked (e.g. due to revealed fact of cheating), it will not affect the question resolution.",
+        "background_info": "The [World Chess Championship 2024](https://en.wikipedia.org/wiki/World_Chess_Championship_2024) match between the reigning world champion Ding Liren (Rating: 2728 as of 1 Nov 2024) and the challenger Gukesh Dommaraju (Rating: 2783 as of 1 Nov 2024) is set to take place between 25 November and 13 December 2024, in Singapore.\n\nAs of November 1st, 2024, Ding Liren is [23rd in the world](https://2700chess.com/), but was in the top 5 for 6 consecutive years, reaching as high as #2, with his top rating being the 12th highest in the history of chess. He also [used to have](https://en.chessbase.com/post/ding-liren-profile-2024-fide) the longest unbeaten streak of 100 games, until Carsen surpassed it. Gukesh D has his own [set of achievements](https://en.wikipedia.org/wiki/Gukesh_Dommaraju), being the third-youngest grandmaster in history, the third-youngest to reach a chess rating of 2700, the youngest to reach a rating of 2750, the youngest Candidates Tournament winner and the youngest contender to compete for the World Championship.\n\nThe match will be best of 14 games; a score of at least 7\u00bd would win the world championship. If the score is equal after 14 games, tiebreak games with faster time controls will be played. \n\nIn chess a win is 1 point and a draw is \u00bd point with a high tendency towards draws at the highest level.\n\nThe time control for each game in the classical portion of the match is 120 minutes per side for the first 40 moves and 30 minutes for the rest of the game, with a 30-second increment per move starting with move 41.",
+        "page_url": "https://www.metaculus.com/questions/29783",
+        "num_forecasters": 23,
+        "num_predictions": 52,
+        "close_time": "2024-11-09T15:30:00",
+        "actual_resolution_time": null,
+        "scheduled_resolution_time": "2024-12-08T15:30:00",
+        "api_json": {
+            "id": 29783,
+            "title": "Will the 2024 World Chess Champion be decided in the first 10 games?",
+            "url_title": "",
+            "slug": "will-the-2024-world-chess-champion-be-decided-in-the-first-10-games",
+            "author_id": 113860,
+            "author_username": "RuslanBes",
+            "coauthors": [],
+            "projects": {
+                "question_series": [
+                    {
+                        "id": 32506,
+                        "type": "question_series",
+                        "name": "Q4 AI Forecasting Benchmark Tournament",
+                        "slug": "aibq4",
+                        "prize_pool": "30000.00",
+                        "start_date": "2024-10-08T19:25:49Z",
+                        "close_date": "2025-01-01T19:25:50Z",
+                        "meta_description": "",
+                        "is_ongoing": true,
+                        "user_permission": null,
+                        "created_at": "2024-10-07T19:26:23.380022Z",
+                        "edited_at": "2024-10-07T19:26:23.380027Z",
+                        "default_permission": "viewer",
+                        "add_posts_to_main_feed": false
+                    }
+                ],
+                "default_project": {
+                    "id": 32506,
+                    "type": "question_series",
+                    "name": "Q4 AI Forecasting Benchmark Tournament",
+                    "slug": "aibq4",
+                    "prize_pool": "30000.00",
+                    "start_date": "2024-10-08T19:25:49Z",
+                    "close_date": "2025-01-01T19:25:50Z",
+                    "meta_description": "",
+                    "is_ongoing": true,
+                    "user_permission": null,
+                    "created_at": "2024-10-07T19:26:23.380022Z",
+                    "edited_at": "2024-10-07T19:26:23.380027Z",
+                    "default_permission": "viewer",
+                    "add_posts_to_main_feed": false
+                }
+            },
+            "created_at": "2024-11-08T14:19:42.579234Z",
+            "published_at": "2024-11-08T15:30:00Z",
+            "edited_at": "2024-11-08T14:19:42.582780Z",
+            "curation_status": "approved",
+            "comment_count": 0,
+            "status": "open",
+            "resolved": false,
+            "actual_close_time": null,
+            "scheduled_close_time": "2024-11-09T15:30:00Z",
+            "scheduled_resolve_time": "2024-12-08T15:30:00Z",
+            "open_time": "2024-11-08T15:30:00Z",
+            "nr_forecasters": 23,
+            "question": {
+                "id": 29635,
+                "title": "Will the 2024 World Chess Champion be decided in the first 10 games?",
+                "description": "The [World Chess Championship 2024](https://en.wikipedia.org/wiki/World_Chess_Championship_2024) match between the reigning world champion Ding Liren (Rating: 2728 as of 1 Nov 2024) and the challenger Gukesh Dommaraju (Rating: 2783 as of 1 Nov 2024) is set to take place between 25 November and 13 December 2024, in Singapore.\n\nAs of November 1st, 2024, Ding Liren is [23rd in the world](https://2700chess.com/), but was in the top 5 for 6 consecutive years, reaching as high as #2, with his top rating being the 12th highest in the history of chess. He also [used to have](https://en.chessbase.com/post/ding-liren-profile-2024-fide) the longest unbeaten streak of 100 games, until Carsen surpassed it. Gukesh D has his own [set of achievements](https://en.wikipedia.org/wiki/Gukesh_Dommaraju), being the third-youngest grandmaster in history, the third-youngest to reach a chess rating of 2700, the youngest to reach a rating of 2750, the youngest Candidates Tournament winner and the youngest contender to compete for the World Championship.\n\nThe match will be best of 14 games; a score of at least 7\u00bd would win the world championship. If the score is equal after 14 games, tiebreak games with faster time controls will be played. \n\nIn chess a win is 1 point and a draw is \u00bd point with a high tendency towards draws at the highest level.\n\nThe time control for each game in the classical portion of the match is 120 minutes per side for the first 40 moves and 30 minutes for the rest of the game, with a 30-second increment per move starting with move 41.",
+                "created_at": "2024-11-08T14:19:42.579234Z",
+                "open_time": "2024-11-08T15:30:00Z",
+                "cp_reveal_time": "2024-11-09T15:30:00Z",
+                "scheduled_resolve_time": "2024-12-08T15:30:00Z",
+                "actual_resolve_time": null,
+                "resolution_set_time": null,
+                "scheduled_close_time": "2024-11-09T15:30:00Z",
+                "actual_close_time": "2024-11-09T15:30:00Z",
+                "type": "binary",
+                "options": null,
+                "status": "open",
+                "possibilities": null,
+                "resolution": null,
+                "include_bots_in_aggregates": true,
+                "question_weight": 1.0,
+                "resolution_criteria": "This question will resolve as **Yes** if either player in the 2024 World Chess Championship match reaches 7.5 points before the 11th classical game (e.g. by winning 5 games and drawing another 5).\n\nThis question will also resolve as **Yes** if for any other reason the 2024 Chess Champion is declared by FIDE before the 11th classical game is played (e.g. a player forteits the match or is disqualified during the match).",
+                "fine_print": "* If the match is played by any other players than Ding Liren and Gukesh Dommaraju, the question will be **Annulled**.\n* If the result of the game 10 is not known by 7 January 2025 (and the 2024 Chess Champion is still not declared by that date) the question will resolve as **Ambiguous**.\n* If the results of one or more of the first 10 games are annulled, then these games are not included in the count of the games for the resolution. This includes the case when both players receive 0 points for the game for violating Fair Play policy.\n* If the 2024 Chess Champion title is later revoked (e.g. due to revealed fact of cheating), it will not affect the question resolution.",
+                "label": null,
+                "open_upper_bound": null,
+                "open_lower_bound": null,
+                "scaling": {
+                    "range_max": null,
+                    "range_min": null,
+                    "zero_point": null
+                },
+                "post_id": 29783,
+                "aggregations": {
+                    "recency_weighted": {
+                        "history": [],
+                        "latest": null,
+                        "score_data": {}
+                    },
+                    "unweighted": {
+                        "history": [],
+                        "latest": null,
+                        "score_data": {}
+                    },
+                    "single_aggregation": {
+                        "history": [],
+                        "latest": null,
+                        "score_data": {}
+                    },
+                    "metaculus_prediction": {
+                        "history": [],
+                        "latest": null,
+                        "score_data": {}
+                    }
+                },
+                "my_forecasts": {
+                    "history": [],
+                    "latest": null,
+                    "score_data": {}
+                }
+            },
+            "user_permission": "forecaster",
+            "vote": {
+                "score": 0,
+                "user_vote": null
+            },
+            "forecasts_count": 52,
+            "description": "The [World Chess Championship 2024](https://en.wikipedia.org/wiki/World_Chess_Championship_2024) match between the reigning world champion Ding Liren (Rating: 2728 as of 1 Nov 2024) and the challenger Gukesh Dommaraju (Rating: 2783 as of 1 Nov 2024) is set to take place between 25 November and 13 December 2024, in Singapore.\n\nAs of November 1st, 2024, Ding Liren is [23rd in the world](https://2700chess.com/), but was in the top 5 for 6 consecutive years, reaching as high as #2, with his top rating being the 12th highest in the history of chess. He also [used to have](https://en.chessbase.com/post/ding-liren-profile-2024-fide) the longest unbeaten streak of 100 games, until Carsen surpassed it. Gukesh D has his own [set of achievements](https://en.wikipedia.org/wiki/Gukesh_Dommaraju), being the third-youngest grandmaster in history, the third-youngest to reach a chess rating of 2700, the youngest to reach a rating of 2750, the youngest Candidates Tournament winner and the youngest contender to compete for the World Championship.\n\nThe match will be best of 14 games; a score of at least 7\u00bd would win the world championship. If the score is equal after 14 games, tiebreak games with faster time controls will be played. \n\nIn chess a win is 1 point and a draw is \u00bd point with a high tendency towards draws at the highest level.\n\nThe time control for each game in the classical portion of the match is 120 minutes per side for the first 40 moves and 30 minutes for the rest of the game, with a 30-second increment per move starting with move 41."
+        },
+        "community_prediction_at_access_time": null
+    }
+]

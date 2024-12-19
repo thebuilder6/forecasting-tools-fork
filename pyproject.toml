@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "forecasting-tools"
+version = "0.2.2"
+description = "AI forecasting and research tools to help humans reason about and forecast the future"
+authors = ["Benjamin Wilson <mokoresearch@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["ai", "forecasting", "research", "metaculus", "prediction"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.10",
+    "Natural Language :: English",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain-community = "^0.3.4"
+langchain-openai = "^0.2.5"
+langchain-core = "^0.3.15"
+langchain-anthropic = "^0.2.4"
+openai = "^1.51.0"
+tiktoken = "^0.8.0"
+aiofiles = "^23.2.1"
+aiohttp = "^3.9.3"
+aiolimiter = "^1.1.0"
+asyncio = "^3.4.3"
+nest-asyncio = "^1.5.8"
+requests = "^2.32.3"
+numpy = "^1.26.0"
+pipreqs = "^0.4.13"
+pydantic = "^2.9.2"
+python-dotenv = "^1.0.0"
+regex = "^2023.8.8"
+tenacity = "^8.5.0"
+pillow = "^10.4.0"
+transformers = "^4.44.1"
+typeguard = "^4.3.0"
+pre-commit = "^4.0.1"
+scikit-learn = "^1.5.2"
+dspy = "^2.5.29"
+
+[tool.poetry.group.dev.dependencies]
+seaborn = "^0.13.2"
+matplotlib = "^3.9.2"
+ipykernel = "^6.29.5"
+notebook = "^7.2.2"
+streamlit = "^1.36.0"
+scipy = "^1.12.0"
+pytest = "^8.3.2"
+pytest-xdist = "^3.3.1"
+pytest-mock = "^3.14.0"
+pytest-asyncio = "^0.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
