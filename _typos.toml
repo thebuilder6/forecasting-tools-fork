@@ -8,6 +8,7 @@ AttributeIDSupressMenu = "AttributeIDSupressMenu"
 
 [default.extend-words]
 # words that should not be corrected
+Metaculus = "Metaculus"
 dot_acn = ".acn"
 ba = "ba"
 ned = "Ned"
