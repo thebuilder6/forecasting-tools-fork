@@ -22,6 +22,14 @@ class MultipleChoiceReport(ForecastReport):
     question: MultipleChoiceQuestion
     prediction: PredictedOptionList
 
+    @property
+    def inversed_expected_log_score(self) -> float | None:
+        raise NotImplementedError("Not implemented")
+
+    @property
+    def community_prediction(self) -> PredictedOptionList | None:
+        raise NotImplementedError("Not implemented")
+
     async def publish_report_to_metaculus(self) -> None:
         if self.question.id_of_question is None:
             raise ValueError("Question ID is None")

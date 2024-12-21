@@ -8,14 +8,13 @@ from typing import Any
 import streamlit as st
 from pydantic import BaseModel
 
-from forecasting_tools.util.file_manipulation import load_json_file
 from forecasting_tools.util.jsonable import Jsonable
 from front_end.helpers.app_page import AppPage
 
 logger = logging.getLogger(__name__)
 
 
-class Example(Jsonable, BaseModel):
+class Example(BaseModel, Jsonable):
     short_name: str | None = None
     notes: str | None = None
     input: dict[str, Any]
@@ -102,8 +101,7 @@ class ToolPage(AppPage, ABC):
     async def _get_examples(cls) -> list[Example]:
         if cls.EXAMPLES_FILE_PATH is None:
             return []
-        examples_raw = load_json_file(cls.EXAMPLES_FILE_PATH)
-        examples = [Example.from_json(ex) for ex in examples_raw]
+        examples = Example.load_json_from_file_path(cls.EXAMPLES_FILE_PATH)
         return examples
 
     @classmethod
