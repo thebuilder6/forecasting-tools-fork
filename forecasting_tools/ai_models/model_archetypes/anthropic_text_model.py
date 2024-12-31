@@ -1,4 +1,5 @@
 import logging
+import os
 from abc import ABC
 
 from langchain_anthropic import ChatAnthropic
@@ -7,6 +8,7 @@ from langchain_community.callbacks.bedrock_anthropic_callback import (
     _get_anthropic_claude_token_cost,
 )
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
+from pydantic import SecretStr
 
 from forecasting_tools.ai_models.ai_utils.response_types import (
     TextTokenCostResponse,
@@ -19,6 +21,12 @@ logger = logging.getLogger(__name__)
 
 
 class AnthropicTextToTextModel(TraditionalOnlineLlm, ABC):
+    API_KEY_MISSING = True if os.getenv("ANTHROPIC_API_KEY") is None else False
+    ANTHROPIC_API_KEY = SecretStr(
+        os.getenv("ANTHROPIC_API_KEY")  # type: ignore
+        if not API_KEY_MISSING
+        else "fake-api-key-so-tests-dont-fail-to-initialize"
+    )
 
     async def invoke(self, prompt: str) -> str:
         response: TextTokenCostResponse = (
@@ -46,6 +54,7 @@ class AnthropicTextToTextModel(TraditionalOnlineLlm, ABC):
             timeout=None,
             stop=None,
             base_url=None,
+            api_key=self.ANTHROPIC_API_KEY,
         )
         messages = self._turn_model_input_into_messages(prompt)
         answer_message = await anthropic_llm.ainvoke(messages)
@@ -91,16 +100,23 @@ class AnthropicTextToTextModel(TraditionalOnlineLlm, ABC):
         probable_output = "Hello! How can I assist you today? Feel free to ask any questions or let me know if you need help with anything."
 
         model = cls()
-        prompt_tokens = model.input_to_tokens(cheap_input)
+        prompt_tokens = (
+            model.input_to_tokens(cheap_input)
+            if not cls.API_KEY_MISSING
+            else 13
+        )
         anthropic_llm = ChatAnthropic(
             model_name=model.MODEL_NAME,
             timeout=None,
             stop=None,
             base_url=None,
+            api_key=cls.ANTHROPIC_API_KEY,
         )
-        completion_tokens = anthropic_llm.get_num_tokens(probable_output)
-        adjustment = 9  # Through manual experimentation, it was found that the number of tokens returned by the API is 9 off for the completion response
-        completion_tokens += adjustment
+        completion_tokens = (
+            anthropic_llm.get_num_tokens(probable_output)
+            if not cls.API_KEY_MISSING
+            else 26
+        )
         total_cost = model.calculate_cost_from_tokens(
             prompt_tkns=prompt_tokens, completion_tkns=completion_tokens
         )
@@ -126,16 +142,10 @@ class AnthropicTextToTextModel(TraditionalOnlineLlm, ABC):
             timeout=None,
             stop=None,
             base_url=None,
+            api_key=self.ANTHROPIC_API_KEY,
         )
         messages = self._turn_model_input_into_messages(prompt)
         tokens = llm.get_num_tokens_from_messages(messages)
-        adjustment = 0
-        for message in messages:
-            if isinstance(message, HumanMessage):
-                adjustment += 5  # Through manual experimentation, it was found that the number of tokens returned by the API is 5 off for user messages
-            if isinstance(message, SystemMessage):
-                adjustment -= 2  # Through manual experimentation, it was found that the number of tokens returned by the API is 2 off for system messages
-        tokens += adjustment
         return tokens
 
     def calculate_cost_from_tokens(
