@@ -1,3 +1,5 @@
+import asyncio
+
 from forecasting_tools import MetaculusApi, TemplateBot
 
 # question = MetaculusApi.get_question_by_post_id(11245)  # US 2024 Election
