@@ -1,9 +1,9 @@
-
 from typing import Final
 
 from forecasting_tools.ai_models.model_archetypes.google_model import (
     GoogleTextToTextModel,
 )
+
 
 class Gemini2FlashThinking(GoogleTextToTextModel):
     """
@@ -21,4 +21,3 @@ class Gemini2FlashThinking(GoogleTextToTextModel):
     TIMEOUT_TIME: Final[int] = 30  # Example timeout
     TOKENS_PER_PERIOD_LIMIT: Final[int] = 50000  # Example limit
     TOKEN_PERIOD_IN_SECONDS: Final[int] = 60
-

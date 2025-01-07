@@ -1,4 +1,3 @@
-
 import logging
 import os
 from abc import ABC
@@ -15,6 +14,7 @@ from forecasting_tools.ai_models.model_archetypes.traditional_online_llm import 
 )
 
 logger = logging.getLogger(__name__)
+
 
 class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
     API_KEY_MISSING = True if os.getenv("GOOGLE_API_KEY") is None else False
@@ -56,14 +56,10 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
 
         # Placeholder for token and cost calculation - Google AI Studio doesn't directly provide this yet.
         prompt_tokens = (
-            self.input_to_tokens(prompt)
-            if not self.API_KEY_MISSING
-            else 0
+            self.input_to_tokens(prompt) if not self.API_KEY_MISSING else 0
         )
         completion_tokens = (
-            self.output_to_tokens(answer)
-            if not self.API_KEY_MISSING
-            else 0
+            self.output_to_tokens(answer) if not self.API_KEY_MISSING else 0
         )
         total_tokens = prompt_tokens + completion_tokens
         cost = self.calculate_cost_from_tokens(
@@ -106,10 +102,14 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
 
         model = cls()
         prompt_tokens = (
-            model.input_to_tokens(cheap_input) if not cls.API_KEY_MISSING else 0
+            model.input_to_tokens(cheap_input)
+            if not cls.API_KEY_MISSING
+            else 0
         )
         completion_tokens = (
-            model.output_to_tokens(probable_output) if not cls.API_KEY_MISSING else 0
+            model.output_to_tokens(probable_output)
+            if not cls.API_KEY_MISSING
+            else 0
         )
         total_cost = model.calculate_cost_from_tokens(
             prompt_tkns=prompt_tokens, completion_tkns=completion_tokens
@@ -156,4 +156,3 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         # This is a placeholder for future cost calculations.
         # For now, we assume the cost is 0.
         return 0.0
-
