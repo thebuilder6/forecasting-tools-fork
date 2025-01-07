@@ -7,6 +7,9 @@ from forecasting_tools.ai_models.claude35sonnet import (
 from forecasting_tools.ai_models.exa_searcher import ExaSearcher as ExaSearcher
 from forecasting_tools.ai_models.gpt4o import Gpt4o as Gpt4o
 from forecasting_tools.ai_models.gpt4ovision import Gpt4oVision as Gpt4oVision
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking as Gemini2FlashThinking,
+)
 from forecasting_tools.ai_models.metaculus4o import (
     Gpt4oMetaculusProxy as Gpt4oMetaculusProxy,
 )
