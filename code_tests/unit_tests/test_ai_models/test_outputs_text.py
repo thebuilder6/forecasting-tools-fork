@@ -18,6 +18,9 @@ from forecasting_tools.ai_models.basic_model_interfaces.ai_model import AiModel
 from forecasting_tools.ai_models.basic_model_interfaces.outputs_text import (
     OutputsText,
 )
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 from forecasting_tools.ai_models.gpt4o import Gpt4o
 
 logger = logging.getLogger(__name__)
@@ -174,8 +177,10 @@ def test_type_verification_works_for_valid_types(
     mock_value_for_invoke: str,
     expected_output: Any,
 ) -> None:
-    mock_the_value_output_of_invoke(mocker, Gpt4o, mock_value_for_invoke)
-    ai_model = Gpt4o()
+    mock_the_value_output_of_invoke(
+        mocker, Gemini2FlashThinking, mock_value_for_invoke
+    )
+    ai_model = Gemini2FlashThinking()
     cheap_input = ai_model._get_cheap_input_for_invoke()
     coroutine = ai_model.invoke_and_return_verified_type(
         cheap_input, type_to_return, allowed_invoke_tries_for_failed_output=1
@@ -244,8 +249,10 @@ def test_invoke_for_running_code(
     expected_output_type: type,
     expected_value: Any,
 ) -> None:
-    mock_the_value_output_of_invoke(mocker, Gpt4o, mock_value_for_invoke)
-    ai_model = Gpt4o()
+    mock_the_value_output_of_invoke(
+        mocker, Gemini2FlashThinking, mock_value_for_invoke
+    )
+    ai_model = Gemini2FlashThinking()
     cheap_input = ai_model._get_cheap_input_for_invoke()
     coroutine = ai_model.invoke_and_unsafely_run_and_return_generated_code(
         cheap_input, expected_output_type, 1
