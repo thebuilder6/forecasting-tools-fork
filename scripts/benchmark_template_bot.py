@@ -1,3 +1,5 @@
+import asyncio
+
 from forecasting_tools import Benchmarker, BenchmarkForBot, TemplateBot
 
 
