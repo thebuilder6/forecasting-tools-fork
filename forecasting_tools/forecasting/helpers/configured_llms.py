@@ -1,16 +1,18 @@
-from forecasting_tools.ai_models.gpt4o import Gpt4o
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 from forecasting_tools.ai_models.gpt4ovision import (
     Gpt4oVision,
     Gpt4VisionInput,
 )
 
 
-class BasicLlm(Gpt4o):
+class BasicLlm(Gemini2FlashThinking):
     # NOTE: If need be, you can force an API key here through OpenAI Client class variable
     pass
 
 
-class AdvancedLlm(Gpt4o):
+class AdvancedLlm(Gemini2FlashThinking):
     pass
 
 
