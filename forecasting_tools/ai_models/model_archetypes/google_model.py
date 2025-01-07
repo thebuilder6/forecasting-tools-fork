@@ -3,8 +3,8 @@ import logging
 import os
 from abc import ABC
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
+from langchain_google_genai import ChatGoogleGenerativeAI
 from pydantic import SecretStr
 
 from forecasting_tools.ai_models.ai_utils.response_types import (
@@ -55,7 +55,9 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         answer = answer_message.content
 
         # Placeholder for token and cost calculation - Google AI Studio doesn't directly provide this yet.
-        prompt_tokens = self.input_to_tokens(prompt) if not self.API_KEY_MISSING else 0
+        prompt_tokens = (
+            self.input_to_tokens(prompt) if not self.API_KEY_MISSING else 0
+        )
         completion_tokens = (
             self.output_to_tokens(answer) if not self.API_KEY_MISSING else 0
         )
@@ -99,7 +101,9 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         probable_output = "Hello! How can I assist you today?"
 
         model = cls()
-        prompt_tokens = model.input_to_tokens(cheap_input) if not cls.API_KEY_MISSING else 0
+        prompt_tokens = (
+            model.input_to_tokens(cheap_input) if not cls.API_KEY_MISSING else 0
+        )
         completion_tokens = (
             model.output_to_tokens(probable_output) if not cls.API_KEY_MISSING else 0
         )

@@ -13,8 +13,7 @@ class Gemini2FlashThinking(GoogleTextToTextModel):
     specific to the Gemini 2 Flash Thinking model.
     """
 
-    # Replace with the actual model name when available
-    MODEL_NAME: Final[str] = "gemini-2.0-flash-thinking-exp-1219"  # Hypothetical name
+    MODEL_NAME: Final[str] = "gemini-2.0-flash-thinking-exp-1219"
 
     # The following are placeholder values - update with actual limits from Google
     REQUESTS_PER_PERIOD_LIMIT: Final[int] = 150  # Example limit
