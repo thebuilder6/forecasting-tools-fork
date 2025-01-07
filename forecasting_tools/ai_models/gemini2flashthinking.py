@@ -16,7 +16,7 @@ class Gemini2FlashThinking(GoogleTextToTextModel):
     MODEL_NAME: Final[str] = "gemini-2.0-flash-thinking-exp-1219"
 
     # The following are placeholder values - update with actual limits from Google
-    REQUESTS_PER_PERIOD_LIMIT: Final[int] = 150  # Example limit
+    REQUESTS_PER_PERIOD_LIMIT: Final[int] = 10  # Example limit
     REQUEST_PERIOD_IN_SECONDS: Final[int] = 60
     TIMEOUT_TIME: Final[int] = 30  # Example timeout
     TOKENS_PER_PERIOD_LIMIT: Final[int] = 50000  # Example limit
