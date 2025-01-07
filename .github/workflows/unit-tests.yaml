@@ -44,3 +44,9 @@ jobs:
       - name: "Run he backend unit tests"
         if: ${{ !cancelled() }}
         run: poetry run pytest ./code_tests/unit_tests
+        env:
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+          PERPLEXITY_API_KEY:
+          EXA_API_KEY:
+          CODA_API_KEY:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}

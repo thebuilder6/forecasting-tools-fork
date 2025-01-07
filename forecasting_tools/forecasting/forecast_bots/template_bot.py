@@ -54,7 +54,6 @@ class TemplateBot(ForecastBot):
             )
         )
     )
-    print(FINAL_DECISION_LLM)
 
     async def run_research(self, question: MetaculusQuestion) -> str:
         system_prompt = clean_indents(
