@@ -1,7 +1,12 @@
+import os
 from datetime import datetime
 
 from forecasting_tools.ai_models.ai_utils.ai_misc import clean_indents
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 from forecasting_tools.ai_models.gpt4o import Gpt4o
+from forecasting_tools.ai_models.metaculus4o import Gpt4oMetaculusProxy
 from forecasting_tools.forecasting.forecast_bots.template_bot import (
     TemplateBot,
 )
@@ -16,7 +21,19 @@ from forecasting_tools.forecasting.questions_and_reports.questions import (
 
 
 class ExaQ4BinaryBot(TemplateBot):
-    FINAL_DECISION_LLM = Gpt4o(temperature=0.1)
+    FINAL_DECISION_LLM = (
+        Gpt4o(temperature=0.1)
+        if os.getenv("OPENAI_API_KEY")
+        else (
+            Gemini2FlashThinking(temperature=0.1)
+            if os.getenv("GOOGLE_API_KEY")
+            else (
+                Gpt4oMetaculusProxy(temperature=0.1)
+                if os.getenv("METACULUS_TOKEN")
+                else Gpt4o(temperature=0.1)
+            )
+        )
+    )
 
     async def run_research(self, question: MetaculusQuestion) -> str:
         prompt = clean_indents(

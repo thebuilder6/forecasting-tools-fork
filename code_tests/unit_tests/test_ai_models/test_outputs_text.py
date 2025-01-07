@@ -216,7 +216,7 @@ def test_type_verification_fails_for_invalid_types(
     mocker: Mock, type_to_return: type, mock_value_for_invoke: str
 ) -> None:
     mock_the_value_output_of_invoke(mocker, Gpt4o, mock_value_for_invoke)
-    ai_model = Gpt4o()
+    ai_model = Gemini2FlashThinking()
     cheap_input = ai_model._get_cheap_input_for_invoke()
     coroutine = ai_model.invoke_and_return_verified_type(
         cheap_input, type_to_return, allowed_invoke_tries_for_failed_output=1
@@ -274,10 +274,8 @@ def test_schema_generation_works() -> None:
         float_value: float
         list_value: list[int]
 
-    format_instructions = (
-        Gpt4o().get_schema_format_instructions_for_pydantic_type(
-            TestPydanticModel
-        )
+    format_instructions = Gemini2FlashThinking().get_schema_format_instructions_for_pydantic_type(
+        TestPydanticModel
     )
     logger.debug(format_instructions)
     assert "int_value" in format_instructions
