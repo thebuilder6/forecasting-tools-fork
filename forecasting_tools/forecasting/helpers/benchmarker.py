@@ -64,6 +64,9 @@ class Benchmarker:
         self.concurrent_question_batch_size = concurrent_question_batch_size
 
     async def run_benchmark(self) -> list[BenchmarkForBot]:
+        print(
+            "Running benchmark on Metaculus questions. This might take a while..."
+        )
         questions = MetaculusApi.get_benchmark_questions(
             self.number_of_questions_to_use,
             random_seed=42,
