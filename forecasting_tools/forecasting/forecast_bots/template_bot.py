@@ -10,6 +10,7 @@ from forecasting_tools.ai_models.gemini2flashthinking import (
 )
 from forecasting_tools.ai_models.gpt4o import Gpt4o
 from forecasting_tools.ai_models.perplexity import Perplexity
+from forecasting_tools.ai_models.metaculus4o import Gpt4oMetaculusProxy
 from forecasting_tools.forecasting.forecast_bots.forecast_bot import (
     ForecastBot,
 )
