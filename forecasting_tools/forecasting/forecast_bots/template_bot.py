@@ -38,12 +38,15 @@ logger = logging.getLogger(__name__)
 
 class TemplateBot(ForecastBot):
     FINAL_DECISION_LLM = (
+        print ("Using Gemini2FlashThinking")
         Gemini2FlashThinking(temperature=0.7)  # Prioritize Gemini
         if os.getenv("GOOGLE_API_KEY")
         else (
+            print ("Using Gpt4o")
             Gpt4o(temperature=0.7)
             if os.getenv("OPENAI_API_KEY")
             else (
+                print ("Using Gpt4oMetaculusProxy")
                 Gpt4oMetaculusProxy(temperature=0.7)
                 if os.getenv("METACULUS_TOKEN")
                 else (
