@@ -10,8 +10,8 @@ templatebot = TemplateBot()
 
 
 async def benchmark_template_bot() -> None:
-    report = await templatebot.forecast_questions([question])
-    print(report.explanation)
+    reports = await templatebot.forecast_questions([question])
+    print(reports[0].explanation)
 
 
 if __name__ == "__main__":
