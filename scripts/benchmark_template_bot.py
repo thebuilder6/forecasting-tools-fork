@@ -21,5 +21,6 @@ async def benchmark_template_bot() -> None:
         print(f"Time: {benchmark.time_taken_in_minutes}min")
         print(f"Cost: ${benchmark.total_cost}")
 
+
 if __name__ == "__main__":
     asyncio.run(benchmark_template_bot())
