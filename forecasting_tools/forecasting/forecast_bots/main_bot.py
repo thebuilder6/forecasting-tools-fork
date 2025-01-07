@@ -1,7 +1,9 @@
 from datetime import datetime
 
 from forecasting_tools.ai_models.ai_utils.ai_misc import clean_indents
-from forecasting_tools.ai_models.gpt4o import Gpt4o
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 from forecasting_tools.forecasting.forecast_bots.template_bot import (
     TemplateBot,
 )
@@ -18,7 +20,7 @@ from forecasting_tools.forecasting.sub_question_researchers.research_coordinator
 
 
 class MainBot(TemplateBot):
-    FINAL_DECISION_LLM = Gpt4o(temperature=0.7)
+    FINAL_DECISION_LLM = Gemini2FlashThinking(temperature=0.7)
 
     def __init__(
         self,

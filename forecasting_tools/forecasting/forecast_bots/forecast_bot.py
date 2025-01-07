@@ -44,7 +44,7 @@ class ForecastBot(ABC):
         *,
         research_reports_per_question: int = 1,
         predictions_per_research_report: int = 1,
-        use_research_summary_to_forecast: bool = False,
+        use_research_summary_to_forecast: bool = True,
         publish_reports_to_metaculus: bool = False,
         folder_to_save_reports_to: str | None = None,
         skip_previously_forecasted_questions: bool = False,
