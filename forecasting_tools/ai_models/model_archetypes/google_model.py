@@ -56,10 +56,14 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
 
         # Placeholder for token and cost calculation - Google AI Studio doesn't directly provide this yet.
         prompt_tokens = (
-            self.input_to_tokens(prompt) if not self.API_KEY_MISSING else 0
+            self.input_to_tokens(prompt)
+            if not self.API_KEY_MISSING
+            else 0
         )
         completion_tokens = (
-            self.output_to_tokens(answer) if not self.API_KEY_MISSING else 0
+            self.output_to_tokens(answer)
+            if not self.API_KEY_MISSING
+            else 0
         )
         total_tokens = prompt_tokens + completion_tokens
         cost = self.calculate_cost_from_tokens(
