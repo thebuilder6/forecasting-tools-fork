@@ -6,7 +6,7 @@ from datetime import datetime
 from forecasting_tools.ai_models.ai_utils.ai_misc import clean_indents
 from forecasting_tools.ai_models.claude35sonnet import Claude35Sonnet
 from forecasting_tools.ai_models.gpt4o import Gpt4o
-from forecasting_tools.ai_models.gemini_flash_thinking import Gemini2FlashThinking  # Import Gemini model
+from forecasting_tools.ai_models.gemini2flashthinking import Gemini2FlashThinking  # Import Gemini model
 from forecasting_tools.ai_models.metaculus4o import Gpt4oMetaculusProxy
 from forecasting_tools.ai_models.perplexity import Perplexity
 from forecasting_tools.forecasting.forecast_bots.forecast_bot import (
