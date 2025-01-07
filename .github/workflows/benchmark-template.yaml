@@ -1,11 +1,8 @@
-name: Hourly Run Template Bot
+name: Benchmark Template Bot
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/15 * * * *" # runs every 15 minutes. Make sure to skip already forecasted questions!
 
-# Daily job to run the forecast bot
 jobs:
   daily_build:
     runs-on: ubuntu-latest # determines the machine that will run the job - keep as is
