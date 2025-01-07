@@ -1,10 +1,6 @@
+from forecasting_tools import MetaculusApi, TemplateBot
 
-from forecasting_tools import (
-    MetaculusApi,
-    TemplateBot,
-)
-
-#question = MetaculusApi.get_question_by_post_id(11245)  # US 2024 Election
+# question = MetaculusApi.get_question_by_post_id(11245)  # US 2024 Election
 question = MetaculusApi.get_question_by_url(
     "https://www.metaculus.com/questions/1002/progress-in-human-longevity-by-2100/"
 )
@@ -14,6 +10,7 @@ templatebot = TemplateBot()
 async def benchmark_template_bot() -> None:
     report = await templatebot.forecast_questions([question])
     print(report.explanation)
+
 
 if __name__ == "__main__":
     asyncio.run(benchmark_template_bot())
