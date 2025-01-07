@@ -39,20 +39,27 @@ def test_file_path_self_consistency() -> None:
 
     # Adapt assertions based on the environment
     if os.environ.get("GITHUB_ACTIONS") == "true":  # Check for GitHub Actions
-        expected_root = "forecasting-tools-fork"
+        expected_root_suffix = "forecasting-tools-fork"
     else:
-        expected_root = "forecasting-tools"
+        expected_root_suffix = "forecasting-tools"
 
-    assert outer_package_path.endswith(expected_root)
-    assert inner_package_path.endswith(
-        expected_root
-    )  # the test error said that this was also failing.
+    assert outer_package_path.endswith(expected_root_suffix)
+
+    # Check if inner_package_path is constructed correctly relative to outer_package_path
+    assert inner_package_path == os.path.join(
+        outer_package_path, "forecasting_tools"
+    )
+    assert util_folder_path == os.path.join(
+        outer_package_path, "forecasting_tools/util"
+    )
+    assert logs_path == os.path.join(outer_package_path, "logs")
+
     assert util_folder_path.endswith("util")
     assert logs_path.endswith("logs")
 
     stripped_inner_package_path = inner_package_path.removesuffix(
         "/forecasting_tools"
-    ).removesuffix("/forecasting-tools-fork")
+    )
     stripped_util_folder_path = util_folder_path.removesuffix(
         "/forecasting_tools/util"
     )
