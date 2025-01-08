@@ -30,6 +30,7 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
                 prompt
             )
         )
+        print(response.data)
         return response.data
 
     async def _mockable_direct_call_to_model(
@@ -47,7 +48,7 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         google_llm = ChatGoogleGenerativeAI(
             model=self.MODEL_NAME,
             temperature=self.temperature,
-            convert_system_message_to_human=True,
+            convert_system_message_to_human=False,
             api_key=self.GOOGLE_API_KEY,
         )
         messages = self._turn_model_input_into_messages(prompt)
@@ -134,7 +135,7 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         llm = ChatGoogleGenerativeAI(
             model=self.MODEL_NAME,
             api_key=self.GOOGLE_API_KEY,
-            convert_system_message_to_human=True,
+            convert_system_message_to_human=False,
         )
         messages = self._turn_model_input_into_messages(prompt)
         tokens = llm.get_num_tokens_from_messages(messages)
@@ -144,7 +145,7 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         llm = ChatGoogleGenerativeAI(
             model=self.MODEL_NAME,
             api_key=self.GOOGLE_API_KEY,
-            convert_system_message_to_human=True,
+            convert_system_message_to_human=False,
         )
         tokens = llm.get_num_tokens(output)
         return tokens
