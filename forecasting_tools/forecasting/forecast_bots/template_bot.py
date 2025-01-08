@@ -33,14 +33,32 @@ from forecasting_tools.forecasting.questions_and_reports.questions import (
     NumericQuestion,
 )
 
+USE_GEMINI = False
+
 logger = logging.getLogger(__name__)
 
 
 class TemplateBot(ForecastBot):
-    FINAL_DECISION_LLM = (
-        Gemini2FlashThinking(temperature=0.7)  # Prioritize Gemini
-        if os.getenv("GOOGLE_API_KEY")
-        else (
+    if USE_GEMINI:
+        FINAL_DECISION_LLM = (
+            Gemini2FlashThinking(temperature=0.7)  # Prioritize Gemini
+            if os.getenv("GOOGLE_API_KEY")
+            else (
+                Gpt4o(temperature=0.7)
+                if os.getenv("OPENAI_API_KEY")
+                else (
+                    Gpt4oMetaculusProxy(temperature=0.7)
+                    if os.getenv("METACULUS_TOKEN")
+                    else (
+                        Claude35Sonnet(temperature=0.7)
+                        if os.getenv("ANTHROPIC_API_KEY")
+                        else Gpt4o(temperature=0.7)
+                    )
+                )
+            )
+        )
+    else:
+        FINAL_DECISION_LLM = (
             Gpt4o(temperature=0.7)
             if os.getenv("OPENAI_API_KEY")
             else (
@@ -53,7 +71,7 @@ class TemplateBot(ForecastBot):
                 )
             )
         )
-    )
+
     print(FINAL_DECISION_LLM)
 
     async def run_research(self, question: MetaculusQuestion) -> str:
