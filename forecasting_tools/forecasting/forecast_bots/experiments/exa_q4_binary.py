@@ -1,10 +1,12 @@
 from datetime import datetime
 
 from forecasting_tools.ai_models.ai_utils.ai_misc import clean_indents
-from forecasting_tools.ai_models.gemini2flashthinking import Gemini2FlashThinking
-from forecasting_tools.ai_models.gpt4o import Gpt4o
-from forecasting_tools.ai_models.metaculus4o import Gpt4oMetaculusProxy
-from forecasting_tools.forecasting.forecast_bots.template_bot import TemplateBot
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
+from forecasting_tools.forecasting.forecast_bots.template_bot import (
+    TemplateBot,
+)
 from forecasting_tools.forecasting.helpers.smart_searcher import SmartSearcher
 from forecasting_tools.forecasting.questions_and_reports.forecast_report import (
     ReasonedPrediction,
@@ -37,7 +39,9 @@ class ExaQ4BinaryBot(TemplateBot):
     async def _run_forecast_on_binary(
         self, question: BinaryQuestion, research: str
     ) -> ReasonedPrediction[float]:
-        assert isinstance(question, BinaryQuestion), "Question must be a BinaryQuestion"
+        assert isinstance(
+            question, BinaryQuestion
+        ), "Question must be a BinaryQuestion"
         prompt = clean_indents(
             f"""
             You are a professional forecaster interviewing for a job.
@@ -79,4 +83,6 @@ class ExaQ4BinaryBot(TemplateBot):
         prediction = self._extract_forecast_from_binary_rationale(
             gpt_forecast, max_prediction=0.99, min_prediction=0.01
         )
-        return ReasonedPrediction(prediction_value=prediction, reasoning=gpt_forecast)
+        return ReasonedPrediction(
+            prediction_value=prediction, reasoning=gpt_forecast
+        )

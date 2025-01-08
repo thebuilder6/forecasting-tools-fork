@@ -10,7 +10,8 @@ from forecasting_tools import MetaculusApi
 
 # Configure logging - only show INFO and above
 logging.basicConfig(
-    level=logging.INFO, format="%(levelname)s - %(message)s"  # Simplified format
+    level=logging.INFO,
+    format="%(levelname)s - %(message)s",  # Simplified format
 )
 
 
@@ -41,7 +42,9 @@ async def main():
     )
 
     print("\nRunning Flash Thinking Bot...")
-    flash_thinking_reports = await flash_thinking_bot.forecast_questions([question])
+    flash_thinking_reports = await flash_thinking_bot.forecast_questions(
+        [question]
+    )
 
     print("\nRunning Flash 2.0 Bot...")
     flash2_reports = await flash2_bot.forecast_questions([question])

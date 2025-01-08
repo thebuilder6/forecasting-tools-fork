@@ -1,44 +1,38 @@
 from __future__ import annotations
 
-import argparse
 import asyncio
-import os
-import sys
-
-import dotenv
-
-# Dynamically determine the absolute path to the top-level directory
-current_dir = os.path.dirname(os.path.abspath(__file__))
-top_level_dir = os.path.abspath(os.path.join(current_dir, "../"))
-sys.path.append(top_level_dir)
-dotenv.load_dotenv()
-
 import logging
 
+from forecasting_bots.gemini_bots import GeminiExpBot
 from forecasting_tools import MetaculusApi
-from forecasting_bots.my_custom_bot import MyCustomBot
 
-logger = logging.getLogger(__name__)
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s - %(message)s",
+)
 
 
 async def main():
-    bot = MyCustomBot(
-        research_reports_per_question=3,
-        predictions_per_research_report=5,
-        publish_reports_to_metaculus=True,
-        folder_to_save_reports_to="logs/forecasts/",
-        skip_previously_forecasted_questions=True
+    exp_bot = GeminiExpBot(
+        research_reports_per_question=2,
+        predictions_per_research_report=3,
+        publish_reports_to_metaculus=True,  # Set to True to publish results
+        folder_to_save_reports_to="logs/forecasts/exp/",
     )
-    
-    reports = await bot.forecast_on_tournament(
-        MetaculusApi.AI_COMPETITION_ID_Q4
-    )
-    
+
+    tournament_id = (
+        MetaculusApi.CURRENT_QUARTERLY_CUP_ID
+    )  # Use the correct tournament ID
+    reports = await exp_bot.forecast_on_tournament(tournament_id)
+
+    # Print results
     for report in reports:
-        print(f"Question: {report.question.question_text}")
+        print(f"\nQuestion: {report.question.question_text}")
         print(f"Prediction: {report.prediction}")
+        print("\nReasoning:")
+        print(report.explanation)
 
 
 if __name__ == "__main__":
-    import asyncio
     asyncio.run(main())

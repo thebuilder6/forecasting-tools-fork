@@ -1,21 +1,18 @@
 import logging
-import os
 from datetime import datetime
 
 from forecasting_tools import (
     BinaryQuestion,
     MetaculusQuestion,
-    MultipleChoiceQuestion,
-    NumericDistribution,
-    NumericQuestion,
-    PredictedOptionList,
     ReasonedPrediction,
     TemplateBot,
 )
 from forecasting_tools.ai_models.ai_utils.ai_misc import clean_indents
 from forecasting_tools.ai_models.gemini2exp import Gemini2Exp
 from forecasting_tools.ai_models.gemini2flash import Gemini2Flash
-from forecasting_tools.ai_models.gemini2flashthinking import Gemini2FlashThinking
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -66,7 +63,9 @@ class GeminiFlashThinkingExpBot(TemplateBot):
             prediction = self._extract_forecast_from_binary_rationale(
                 reasoning, max_prediction=1, min_prediction=0
             )
-            return ReasonedPrediction(prediction_value=prediction, reasoning=reasoning)
+            return ReasonedPrediction(
+                prediction_value=prediction, reasoning=reasoning
+            )
         except Exception as e:
             logger.error(f"Forecast failed: {str(e)}")
             return ReasonedPrediction(
@@ -126,7 +125,9 @@ class GeminiExpBot(TemplateBot):
         prediction = self._extract_forecast_from_binary_rationale(
             reasoning, max_prediction=1, min_prediction=0
         )
-        return ReasonedPrediction(prediction_value=prediction, reasoning=reasoning)
+        return ReasonedPrediction(
+            prediction_value=prediction, reasoning=reasoning
+        )
 
 
 class GeminiFlash2Bot(TemplateBot):
@@ -177,4 +178,6 @@ class GeminiFlash2Bot(TemplateBot):
         prediction = self._extract_forecast_from_binary_rationale(
             reasoning, max_prediction=1, min_prediction=0
         )
-        return ReasonedPrediction(prediction_value=prediction, reasoning=reasoning)
+        return ReasonedPrediction(
+            prediction_value=prediction, reasoning=reasoning
+        )

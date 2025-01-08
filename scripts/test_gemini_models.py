@@ -5,11 +5,14 @@ import dotenv
 
 from forecasting_tools.ai_models.gemini2exp import Gemini2Exp
 from forecasting_tools.ai_models.gemini2flash import Gemini2Flash
-from forecasting_tools.ai_models.gemini2flashthinking import Gemini2FlashThinking
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 
 # Configure logging
 logging.basicConfig(
-    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    level=logging.DEBUG,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
 logger = logging.getLogger(__name__)

@@ -6,7 +6,9 @@ from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_google_genai import GoogleGenerativeAI
 from pydantic import SecretStr
 
-from forecasting_tools.ai_models.ai_utils.response_types import TextTokenCostResponse
+from forecasting_tools.ai_models.ai_utils.response_types import (
+    TextTokenCostResponse,
+)
 from forecasting_tools.ai_models.model_archetypes.traditional_online_llm import (
     TraditionalOnlineLlm,
 )
@@ -24,7 +26,9 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
 
     async def invoke(self, prompt: str) -> str:
         response: TextTokenCostResponse = (
-            await self._invoke_with_request_cost_time_and_token_limits_and_retry(prompt)
+            await self._invoke_with_request_cost_time_and_token_limits_and_retry(
+                prompt
+            )
         )
         print(response.data)
         return response.data
@@ -33,12 +37,14 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
         self, prompt: str
     ) -> TextTokenCostResponse:
         self._everything_special_to_call_before_direct_call()
-        response: TextTokenCostResponse = await self._call_online_model_using_api(
-            prompt
+        response: TextTokenCostResponse = (
+            await self._call_online_model_using_api(prompt)
         )
         return response
 
-    async def _call_online_model_using_api(self, prompt: str) -> TextTokenCostResponse:
+    async def _call_online_model_using_api(
+        self, prompt: str
+    ) -> TextTokenCostResponse:
         try:
             google_llm = GoogleGenerativeAI(
                 model=self.MODEL_NAME,
@@ -47,14 +53,18 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
                 google_api_key=str(self.GOOGLE_API_KEY.get_secret_value()),
             )
 
-            logger.debug(f"Sending prompt to model {self.MODEL_NAME}: {prompt}")
+            logger.debug(
+                f"Sending prompt to model {self.MODEL_NAME}: {prompt}"
+            )
             answer = await google_llm.ainvoke(prompt)
 
             prompt_tokens = (
                 self.input_to_tokens(prompt) if not self.API_KEY_MISSING else 0
             )
             completion_tokens = (
-                self.output_to_tokens(answer) if not self.API_KEY_MISSING else 0
+                self.output_to_tokens(answer)
+                if not self.API_KEY_MISSING
+                else 0
             )
             total_tokens = prompt_tokens + completion_tokens
             cost = self.calculate_cost_from_tokens(
@@ -80,7 +90,9 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
             logger.error(f"Raw prompt: {prompt}")
             raise
 
-    def _turn_model_input_into_messages(self, prompt: str) -> list[BaseMessage]:
+    def _turn_model_input_into_messages(
+        self, prompt: str
+    ) -> list[BaseMessage]:
         if self.system_prompt is None:
             return [HumanMessage(content=prompt)]
         else:
@@ -100,10 +112,14 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
 
         model = cls()
         prompt_tokens = (
-            model.input_to_tokens(cheap_input) if not cls.API_KEY_MISSING else 0
+            model.input_to_tokens(cheap_input)
+            if not cls.API_KEY_MISSING
+            else 0
         )
         completion_tokens = (
-            model.output_to_tokens(probable_output) if not cls.API_KEY_MISSING else 0
+            model.output_to_tokens(probable_output)
+            if not cls.API_KEY_MISSING
+            else 0
         )
         total_cost = model.calculate_cost_from_tokens(
             prompt_tkns=prompt_tokens, completion_tkns=completion_tokens
