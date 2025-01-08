@@ -37,9 +37,15 @@ jobs:
         # Store under Settings --> Secrets and variables --> Actions
         # Not all these variables are required. See the ReadMe for more details.
         env:
+          FILE_WRITING_ALLOWED: true
           METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
           PERPLEXITY_API_KEY:
-          GOOGLE_API_KEY: ${{ GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           CODA_API_KEY:
           PYTHONPATH: .
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: forecasts-logs
+          path: logs/forecasts/
