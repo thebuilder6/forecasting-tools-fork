@@ -50,6 +50,7 @@ class GoogleTextToTextModel(TraditionalOnlineLlm, ABC):
             temperature=self.temperature,
             convert_system_message_to_human=False,
             api_key=self.GOOGLE_API_KEY,
+            generation_config=getattr(self, 'GENERATION_CONFIG', None)
         )
         messages = self._turn_model_input_into_messages(prompt)
         answer_message = await google_llm.ainvoke(messages)

@@ -13,11 +13,17 @@ class Gemini2FlashThinking(GoogleTextToTextModel):
     specific to the Gemini 2 Flash Thinking model.
     """
 
-    MODEL_NAME: Final[str] = "gemini-2.0-flash-thinking-exp-1219"
+    MODEL_NAME: Final[str] = "gemini-exp-1206"
+    GENERATION_CONFIG = {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_output_tokens": 8192,
+        "response_mime_type": "text/plain",
+    }
 
-    # The following are placeholder values - update with actual limits from Google
-    REQUESTS_PER_PERIOD_LIMIT: Final[int] = 10  # Example limit
+    REQUESTS_PER_PERIOD_LIMIT: Final[int] = 10
     REQUEST_PERIOD_IN_SECONDS: Final[int] = 60
-    TIMEOUT_TIME: Final[int] = 30  # Example timeout
-    TOKENS_PER_PERIOD_LIMIT: Final[int] = 50000  # Example limit
+    TIMEOUT_TIME: Final[int] = 30
+    TOKENS_PER_PERIOD_LIMIT: Final[int] = 50000
     TOKEN_PERIOD_IN_SECONDS: Final[int] = 60
