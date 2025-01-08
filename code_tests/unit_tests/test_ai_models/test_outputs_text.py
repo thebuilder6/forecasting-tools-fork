@@ -21,7 +21,6 @@ from forecasting_tools.ai_models.basic_model_interfaces.outputs_text import (
 from forecasting_tools.ai_models.gemini2flashthinking import (
     Gemini2FlashThinking,
 )
-from forecasting_tools.ai_models.gpt4o import Gpt4o
 
 logger = logging.getLogger(__name__)
 
@@ -215,7 +214,9 @@ def test_type_verification_works_for_valid_types(
 def test_type_verification_fails_for_invalid_types(
     mocker: Mock, type_to_return: type, mock_value_for_invoke: str
 ) -> None:
-    mock_the_value_output_of_invoke(mocker, Gpt4o, mock_value_for_invoke)
+    mock_the_value_output_of_invoke(
+        mocker, Gemini2FlashThinking, mock_value_for_invoke
+    )
     ai_model = Gemini2FlashThinking()
     cheap_input = ai_model._get_cheap_input_for_invoke()
     coroutine = ai_model.invoke_and_return_verified_type(

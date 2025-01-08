@@ -189,7 +189,9 @@ class ForecastBot(ABC):
     async def _research_and_make_predictions(
         self, question: MetaculusQuestion
     ) -> ResearchWithPredictions:
+        print("Running research")
         research = await self.run_research(question)
+        print("Summarizing research")
         summary_report = await self.summarize_research(question, research)
         research_to_use = (
             research
@@ -198,12 +200,15 @@ class ForecastBot(ABC):
         )
 
         if isinstance(question, BinaryQuestion):
+            print("Binary question")
             forecast_function = lambda q, r: self._run_forecast_on_binary(q, r)
         elif isinstance(question, MultipleChoiceQuestion):
+            print("Multiple choice question")
             forecast_function = (
                 lambda q, r: self._run_forecast_on_multiple_choice(q, r)
             )
         elif isinstance(question, NumericQuestion):
+            print("Numeric question")
             forecast_function = lambda q, r: self._run_forecast_on_numeric(
                 q, r
             )

@@ -2,10 +2,10 @@ import asyncio
 
 from forecasting_tools import MetaculusApi, TemplateBot
 
-# question = MetaculusApi.get_question_by_post_id(11245)  # US 2024 Election
-question = MetaculusApi.get_question_by_url(
-    "https://www.metaculus.com/questions/1002/progress-in-human-longevity-by-2100/"
-)
+question = MetaculusApi.get_question_by_post_id(1002)
+# question = MetaculusApi.get_question_by_url(
+#     "https://www.metaculus.com/questions/1002/progress-in-human-longevity-by-2100/"
+# )
 templatebot = TemplateBot()
 
 
