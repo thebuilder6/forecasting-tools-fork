@@ -1,12 +1,11 @@
 import asyncio
 
-from gemini_bot import GeminiBot
-
+from forecasting_bots.gemini_bots import GeminiExpBot
 from forecasting_tools import MetaculusApi
 
 
 async def main():
-    bot = GeminiBot(
+    bot = GeminiExpBot(
         research_reports_per_question=2,
         predictions_per_research_report=3,
         publish_reports_to_metaculus=False,
