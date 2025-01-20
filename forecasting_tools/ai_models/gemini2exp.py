@@ -20,8 +20,8 @@ class Gemini2Exp(GoogleTextToTextModel):
     }
 
     # Rate limits based on Google's documentation
-    REQUESTS_PER_PERIOD_LIMIT: Final[int] = 60
+    REQUESTS_PER_PERIOD_LIMIT: Final[int] = 4
     REQUEST_PERIOD_IN_SECONDS: Final[int] = 60
-    TIMEOUT_TIME: Final[int] = 30
-    TOKENS_PER_PERIOD_LIMIT: Final[int] = 60000
+    TIMEOUT_TIME: Final[int] = 60
+    TOKENS_PER_PERIOD_LIMIT: Final[int] = 30000
     TOKEN_PERIOD_IN_SECONDS: Final[int] = 60

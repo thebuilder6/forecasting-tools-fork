@@ -1,6 +1,10 @@
 from forecasting_tools.ai_models.basic_model_interfaces.ai_model import AiModel
-from forecasting_tools.ai_models.basic_model_interfaces.incurs_cost import IncursCost
-from forecasting_tools.ai_models.basic_model_interfaces.outputs_text import OutputsText
+from forecasting_tools.ai_models.basic_model_interfaces.incurs_cost import (
+    IncursCost,
+)
+from forecasting_tools.ai_models.basic_model_interfaces.outputs_text import (
+    OutputsText,
+)
 from forecasting_tools.ai_models.basic_model_interfaces.request_limited_model import (
     RequestLimitedModel,
 )
@@ -20,7 +24,9 @@ from forecasting_tools.ai_models.claude35sonnet import Claude35Sonnet
 from forecasting_tools.ai_models.exa_searcher import ExaSearcher
 from forecasting_tools.ai_models.gemini2exp import Gemini2Exp
 from forecasting_tools.ai_models.gemini2flash import Gemini2Flash
-from forecasting_tools.ai_models.gemini2flashthinking import Gemini2FlashThinking
+from forecasting_tools.ai_models.gemini2flashthinking import (
+    Gemini2FlashThinking,
+)
 from forecasting_tools.ai_models.gpt4o import Gpt4o
 from forecasting_tools.ai_models.gpt4ovision import Gpt4oVision
 from forecasting_tools.ai_models.gpto1preview import GptO1Preview
