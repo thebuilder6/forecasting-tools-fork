@@ -16,7 +16,9 @@ dotenv.load_dotenv()
 import logging
 
 from forecasting_tools.forecasting.forecast_bots.main_bot import MainBot
-from forecasting_tools.forecasting.forecast_bots.template_bot import TemplateBot
+from forecasting_tools.forecasting.forecast_bots.template_bot import (
+    TemplateBot,
+)
 from forecasting_tools.forecasting.helpers.forecast_database_manager import (
     ForecastDatabaseManager,
     ForecastRunType,

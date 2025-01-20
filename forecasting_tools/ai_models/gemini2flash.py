@@ -14,7 +14,7 @@ class Gemini2Flash(GoogleTextToTextModel):
     GENERATION_CONFIG = {
         "temperature": 1,
         "top_p": 0.95,
-        "top_k": 64,
+        "top_k": 40,
         "max_output_tokens": 8192,
         "response_mime_type": "text/plain",
     }
@@ -23,5 +23,5 @@ class Gemini2Flash(GoogleTextToTextModel):
     REQUESTS_PER_PERIOD_LIMIT: Final[int] = 10
     REQUEST_PERIOD_IN_SECONDS: Final[int] = 60
     TIMEOUT_TIME: Final[int] = 30
-    TOKENS_PER_PERIOD_LIMIT: Final[int] = 60000
+    TOKENS_PER_PERIOD_LIMIT: Final[int] = 30000
     TOKEN_PERIOD_IN_SECONDS: Final[int] = 60
