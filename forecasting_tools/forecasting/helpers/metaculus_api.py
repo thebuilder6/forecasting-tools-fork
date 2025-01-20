@@ -63,6 +63,14 @@ class MetaculusApi:
         raise_for_status_with_additional_info(response)
 
     @classmethod
+    def get_question_post_id_pairs_from_tournament(
+        cls,
+        tournament_id: int,
+    ) -> list[tuple[int, int]]:
+        questions = cls.get_all_open_questions_from_tournament(tournament_id)
+        return [(q.id_of_post, q.id_of_post) for q in questions]
+
+    @classmethod
     def post_binary_question_prediction(
         cls, question_id: int, prediction_in_decimal: float
     ) -> None:
