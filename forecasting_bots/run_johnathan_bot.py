@@ -73,7 +73,10 @@ async def run_johnathan_bot(
         ]
     else:
         # Fetch questions from the tournament
-        question_post_id_pairs = MetaculusApi.get_all_open_questions_from_tournament(tournament_id)
+        question_post_id_pairs = MetaculusApi.get_question_post_id_pairs_from_tournament(
+            tournament_id
+        )
+        print (question_post_id_pairs)
         questions = [
             MetaculusApi.get_question_by_post_id(post_id)
             for _, post_id in question_post_id_pairs
