@@ -10,7 +10,7 @@ class Gemini2FlashThinking(GoogleTextToTextModel):
     Represents the Gemini 2.0 Flash Thinking model for text generation.
     """
 
-    MODEL_NAME: Final[str] = "gemini-2.0-flash-thinking-exp-1219"
+    MODEL_NAME: Final[str] = "gemini-2.0-flash-thinking-exp-1021"
     GENERATION_CONFIG = {
         "temperature": 1,
         "top_p": 0.95,
